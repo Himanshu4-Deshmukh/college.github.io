@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J D College of Engineering</title>
+    <link rel="shortcut icon" href="https://jdcoem.ac.in/wp-content/uploads/2020/01/logo-new.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https//stackpath.bootsstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+    <script src="https://kit.fontawesome.com/739255457e.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        /*Gradient scroll bar  */
+        body::-webkit-scrollbar {
+            width: 11px;
+        }
+
+        .card:hover {
+            background-color: rgb(132, 94, 144);
+            transform: scale(1.1);
+        }
+
+
+
+
+        .box {
+            box-shadow: 0px 0px 4px black;
+        }
+
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 17px;
+            padding: 10px;
+        }
+
+        .col-2 p {
+            text-align: left;
+        }
+
+        .para {
+            max-width: 500px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(64, 64, 64);
+        }
+
+        p {
+            color: white;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .col-2 {
+            flex-basis: 50%;
+            min-width: 300px;
+        }
+
+        .col-2 img {
+            max-width: 100%;
+            padding: 50px 0px;
+        }
+
+        .col-2 h1 {
+            font-size: 50px;
+            line-height: 60px;
+            margin: 25px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff523b;
+            color: #fff;
+            padding: 8px 30px;
+            margin-left: 20%px;
+            margin-top: 20px;
+            border-radius: 30px;
+            transition: 0.5s;
+        }
+
+        .col-2 .btn {
+            margin-top: 70px;
+        }
+
+        .btn:hover {
+            background: #29a423;
+            transform: scaleX(2);
+            transform: scaley(1.1);
+            box-shadow: 2px 2px 20px rgb(49, 49, 49);
+        }
+
+        .header {
+            background: radial-gradient(#fff, rgb(255, 191, 191));
+        }
+
+        .header .row {
+            margin-top: 70px;
+        }
+
+        .categories {
+            margin: 70px 0;
+        }
+
+        .col-3 {
+            text-align: center;
+            flex-basis: 30%;
+            min-width: width 250px;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .col-3 img {
+            width: 100%;
+        }
+
+        .small-container {
+            max-width: 1080px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .col-4 {
+            flex-basis: 25%;
+            padding: 10px;
+            min-width: 200px;
+            margin-bottom: 50px;
+        }
+
+        .col-4 img {
+            width: 100%;
+        }
+
+        .title {
+            text-align: center;
+            margin: 20px;
+            position: relative;
+            line-height: 60px;
+            padding-top: 20px;
+            font-size: 25px;
+            color: rgb(54, 53, 53);
+        }
+
+        .title::after {
+            content: "";
+            width: #ff523b;
+            width: 80px;
+            height: 5px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transition: tra;
+        }
+
+        footer {
+            width: 100%;
+            bottom: 0;
+            background: #192734;
+            /* background-image: linear-gradient(to right, #DECBA4, #3E5151); */
+            color: #fff;
+            padding: 8px;
+            font-size: 13px;
+            line-height: 20px;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .col {
+            flex-basis: 25px;
+            padding: 10px;
+            margin: 30px;
+        }
+
+        .col1 h5 {
+            color: #ff523b;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .dev {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .col h3 {
+            width: fit-content;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .email-id {
+            width: fit-content;
+            margin: 20px 0;
+        }
+
+        .col2 h4 {
+            font-size: 16px;
+            font-weight: 100;
+        }
+
+        .col p {
+            font-size: 16px;
+        }
+
+        .col2 {
+            width: 40%;
+            margin-left: -80px;
+        }
+
+        .col h3 {
+            color: #ff523b;
+            font-size: 20px;
+            font-weight: 900;
+            text-align: justify center;
+            margin-bottom: 20px;
+        }
+
+        .col3 {
+            margin-left: -120px;
+        }
+
+        .col3 ul li a {
+            font-size: 20px;
+            color: white;
+        }
+
+        .col3 ul li a:hover {
+            color: black;
+            font-size: 25px;
+        }
+
+        .col4 {
+            margin-left: -50px;
+            margin-right: 100px;
+            margin-top: 60px;
+        }
+
+        .col4 h3 {
+            margin-bottom: 20px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        ul li {
+            list-style: none;
+            margin-bottom: 12px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: rgb(87, 81, 81);
+        }
+
+        ul li a:hover {
+            color: #ff523b;
+        }
+
+
+        .branchimg {
+            box-shadow: 8px 8px 8px#1c2020;
+        }
+
+        .bang {
+            filter: drop-shadow(10px 10px 10px rgb(60, 60, 60));
+        }
+
+        .far {
+            margin-right: 10px;
+        }
+
+
+
+        .fa-brands {
+            font-size: 25px;
+            padding-right: 8px;
+            padding-left: 8px;
+        }
+
+        .tweet:hover {
+            color: #00B6F1;
+            ;
+        }
+
+        .insta:hover {
+            color: rgb(255, 0, 43);
+        }
+
+
+
+        .in:hover {
+            color: #04669A;
+        }
+
+
+
+
+
+        @media screen and (max-width: 640px) {
+            .row {
+                display: inline;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav ul li {
+                font-size: 13px;
+                font-weight: bolder;
+            }
+
+            .logo {
+                width: 50px;
+            }
+
+            nav ul li {
+                display: none;
+            }
+
+            .para {
+                text-align: center;
+                padding-left: 20px;
+                font-size: 13px;
+            }
+
+            .explore {
+                margin-left: 25%;
+            }
+
+            .students {
+                margin-bottom: none;
+            }
+
+            .col-2 h1 {
+                text-align: center;
+            }
+
+            #pic p {
+                text-align: left;
+            }
+
+            #pic {
+                margin-right: 20px;
+            }
+
+            .col {
+                margin-left: 5%;
+            }
+
+
+        }
+
+
+
+        .containers {
+            display: none;
+        }
+
+        #research {
+
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #research td,
+        #research th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+
+
+
+        #research th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: gray;
+            color: white;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100px;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .box {
+
+
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="https://code-engineering.netlify.app/"><img
+                            src="https://jdcoem.ac.in/wp-content/uploads/2020/01/logo-new.png" width="60px"></a>
+                </div>
+                <nav>
+                    <ul>
+
+                        <li><a class="nav-link" href="#about">About</a></li>
+                        <li><a class="nav-link" href="#departments">Departments</a></li>
+                        <li><a class="nav-link" href="#faculty">Faculty</a></li>
+                        <li><a class="nav-link" href="#research">Reasearch</a></li>
+                        <li><a class="nav-link" href="#placement">Placements</a></li>
+                        <li><a class="nav-link" href="#contact">Contact</a></li>
+
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>J D College Of ENGINEERING</h1>
+                    <div class="para">
+                        The group has redefined the standards of casting industry not only in India but in various
+                        countries across the globe. The Goyal Group of Industries is committed towards its philosophy of
+                        “Customer First” by catering to the customized requirements of the casting industry. Goyal Group
+                        of Industries in the leading Manufacturer of Lustrous Carbon Additive, Coal Dust, Carburizers,
+                        Coatings & Bentonite. The remarkable product line of the group’s companies is predominantly the
+                        products like PihKol, PihBond, Carbolite, PihCarb, Prime Kote, Prime Lite & Prime Flash.
+                    </div>
+
+
+                </div>
+                <div class="col-2">
+                    <img class="bang" src="https://jdcoem.ac.in/wp-content/uploads/2020/01/Prof-S-M-Bang-400x250.png">
+                </div>
+
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+
+
+    <div class="small-container">
+        <h2 class="title" id="departments">Departments</h2>
+        <div class="row">
+            <div class="col-3">
+                <img class="branchimg" src="https://www.cognifyz.com/images/datascience.jpg">
+                <a href="branch/cs.html">CSE</a>
+                <div class="">
+                    <div class="dis">Computer Science Engineering (CSE) is an
+                        engineering discipline that covers several topics
+                        related to computation, programming languages,
+                        program design, computer hardware and software
+                        and integrates several fields of computer science.
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-3">
+                <img class="branchimg"
+                    src="https://s3-ap-south-1.amazonaws.com/ricedigitals3bucket/AUPortalContent/2021/06/10135041/Untitled-design-45.png">
+                <a href="branch/ece.html">ME</a>
+                <div class="">
+                    <div class="dis">Mechanical engineering is an engineering branch that combines engineering physics
+                        and mathematics principles with materials science, to design, analyze, manufacture, and maintain
+                        mechanical systems.
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-3">
+                <img class="branchimg" src="https://cdn.mos.cms.futurecdn.net/steVjWGx3vYPjMpJL2jVcV-970-80.jpg.webp">
+                <a href="branch/ee.html">EE</a>
+                <div class="">
+                    <div class="dis">Electrical and Electronics Engineering. EEE is an engineering discipline which
+                        deals with Electrical and Machine technology, Electrons, Circuit analysis,
+                        Electromagnetism, Instrumentations, Materials for electrical engineering,
+                        Control systems, transmission and distribution, Power engineering.</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <hr>
+
+    <div class="small-container">
+        <h2 class="title" id="faculty">Faculty</h2>
+        <div class="row">
+            <div class="col-3">
+                <img src="https://jdcoem.ac.in/wp-content/uploads/2020/01/Dr-P-B-Maheshwary1-400x250.png">
+                <a>Professor</a>
+
+
+            </div>
+            <div class="col-3">
+                <img src="https://jdcoem.ac.in/wp-content/uploads/2020/01/N-H-Patil-400x250.png">
+                <a>Professor</a>
+
+
+            </div>
+            <div class="col-3">
+                <img src="https://jdcoem.ac.in/wp-content/uploads/2020/01/A-Dorsatwar-400x250.png">
+                <a>Professor</a>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <h3 id="research" class="title">RESEARCH PROFILE (Basic Science & Humanities)</h3>
+
+    <table id="research">
+        <tr>
+            <th>Name of Faculty</th>
+            <th>PhD. Status5</th>
+            <th>Total Experience</th>
+        </tr>
+        <tr>
+            <td>Dr. S R Choudhary </td>
+            <td>PhD Completed</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>Prof. Abdul Ghaffar</td>
+            <td>PhD Completed</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>Prof. Sharukh Kureshi</td>
+            <td>PhD Pursuing</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td>Prof. Atika Ingole</td>
+            <td>PhD Pursuingl</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>Prof. Tejaswini Junghare</td>
+            <td>PhD Pursuing</td>
+            <td>4</td>
+        </tr>
+
+    </table>
+
+    <hr style="margin-top:50px">
+
+    <div class="small-container">
+        <h2 class="title" id="placement">Placements</h2>
+        <div class="row">
+            <div class="col-2">
+                <img src="http://jdcoem.ac.in/wp-content/uploads/2022/07/2021-22.jpg">
+                <h3 style="text-align:center;">2021-2022</h3>
+
+
+
+            </div>
+
+            <div class="col-2">
+                <img src="http://jdcoem.ac.in/wp-content/uploads/2022/07/2020-21.jpg">
+                <h3 style="text-align:center;">2020-2021</h3>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+    <br>
+    <p id="contact" class="title">Contact Us</p>
+    <div class="box">
+        <form action="post">
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="tel">Mobile Number</label>
+            <input type="tel" id="tel" name="tel" placeholder="Mobile Number">
+
+            <label for="lname">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com">
+
+
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+
+    <footer>
+        <div class="row">
+            <div class="col col1" id="pic">
+                <img src="https://jdcoem.ac.in/wp-content/uploads/2020/01/logo-new.png" width="80px">
+
+                <p class="dev">J D College Of Engineering</p>
+
+            </div>
+            <div class="col col2">
+                <h3>J D College Of Engineering</h3>
+                <p>Khandala, Post : Valni Near Hanuman Temple, Borgoan</p>
+                <p>Kalmeshwar Road, Phata, Nagpur, Maharashtra 441501</p>
+                <p class="email-id">jdcoem@gmail.com</p>
+                <h4>+91 - 9002031524</h4>
+            </div>
+            <div class="col col3" id="link">
+                <h3>Links</h3>
+                <ul>
+
+                    <li><a href="/college-Homepage.html">About Us</a></li>
+                    <li><a href="#departments">Departments</a></li>
+                    <li><a href="#faculty">Faculty</a></li>
+                    <li><a href="#placement">Placements</a></li>
+                </ul>
+            </div>
+            <div class="row row4">
+
+
+                <div class="social-media  ">
+                    <i class="tweet fa-brands fa-twitter"></i>
+                    <i class="insta fa-brands fa-instagram"></i>
+                    <i class="in fa-brands fa-linkedin"></i>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>
+
+
+
+</body>
+
+</html>
